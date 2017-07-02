@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.omega_r.omeganavigationmenulib.views.MaxHeightLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:maxHeight="640dp"
+        android:orientation="vertical"
+        app:layout_marginBottomPercent="7.5%"
+        app:layout_marginEndPercent="17%"
+        app:layout_marginTopPercent="7.5%">
+
+        <TextView
+            android:id="@+id/textview_menu_main"
+            style="@style/MenuItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_main_page"/>
+
+        <TextView
+            android:id="@+id/textview_menu_news"
+            style="@style/MenuItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_news"/>
+
+        <TextView
+            android:id="@+id/textview_menu_contacts"
+            style="@style/MenuItemStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_contacts"/>
+
+    </com.omega_r.omeganavigationmenulib.views.MaxHeightLinearLayout>
+
+</android.support.percent.PercentFrameLayout>

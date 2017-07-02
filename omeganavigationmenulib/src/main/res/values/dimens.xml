@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_max_translaion_z">12dp</dimen>
+    <dimen name="menu_min_raw_x">24dp</dimen>
+</resources>
