@@ -1,15 +1,14 @@
-package com.omega_r.omeganavigationmenulib.views;
-
+package com.omega_r.navigationmenu.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
 
-import com.omega_r.omeganavigationmenulib.R;
+import com.omega_r.navigationmenu.R;
 
-public class MaxHeightLinearLayout extends LinearLayout {
+public class MaxHeightLinearLayout extends LinearLayoutCompat {
 
     private int mMaxHeight;
 
@@ -43,7 +42,6 @@ public class MaxHeightLinearLayout extends LinearLayout {
         } else {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         }
-
     }
 
 }

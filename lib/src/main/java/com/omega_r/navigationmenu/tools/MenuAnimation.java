@@ -1,5 +1,4 @@
-package com.omega_r.omeganavigationmenulib.tools;
-
+package com.omega_r.navigationmenu.tools;
 
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -7,7 +6,7 @@ import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Transformation;
 
-import com.omega_r.omeganavigationmenulib.R;
+import com.omega_r.navigationmenu.R;
 
 public class MenuAnimation extends Animation {
 

@@ -1,23 +1,20 @@
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:orientation="vertical"
-    tools:context="com.omega_r.omeganavigationmenu.fragments.NewsFragment">
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <include layout="@layout/include_toolbar"/>
+        <include layout="@layout/include_toolbar" />
     </android.support.design.widget.AppBarLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:gravity="center"
+        android:text="@string/news_fragment" />
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

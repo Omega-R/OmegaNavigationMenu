@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.Omega-R'
@@ -26,15 +25,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion", {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
-
-    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
-
-    testCompile "junit:junit:$rootProject.junitVersion"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
 }
