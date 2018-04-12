@@ -1,1 +1,1 @@
-include ':app', ':omeganavigationmenulib'
+include ':app', ':lib'

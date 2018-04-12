@@ -1,5 +1,4 @@
-package com.omega_r.omeganavigationmenulib.views;
-
+package com.omega_r.libs.navigationmenu;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -7,16 +6,12 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
-import com.omega_r.omeganavigationmenulib.R;
-import com.omega_r.omeganavigationmenulib.R2;
-import com.omega_r.omeganavigationmenulib.tools.MenuAnimation;
+import com.omega_r.libs.navigationmenu.tools.MenuAnimation;
+import com.omega_r.navigationmenu.R;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class ContentMenuLayout extends FrameLayout implements GestureDetector.OnGestureListener,
         MenuAnimation.OnAnimationTimeChangedListener {
@@ -29,11 +24,9 @@ public class ContentMenuLayout extends FrameLayout implements GestureDetector.On
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
     private static final float START_ANIMATION = 0.1f;
 
-    @BindView(R2.id.layout_hook)
-    View mHookLayout;
+    private FrameLayout mHookLayout;
 
     private boolean mShowFlag;
-
     private float mStartX;
     private boolean mMotion;
 
@@ -42,7 +35,6 @@ public class ContentMenuLayout extends FrameLayout implements GestureDetector.On
     private float mPercent;
     @Nullable
     private OnProgressMenuChangedListener mListener;
-
 
     public ContentMenuLayout(Context context) {
         super(context);
@@ -61,7 +53,7 @@ public class ContentMenuLayout extends FrameLayout implements GestureDetector.On
 
     private void init() {
         inflate(getContext(), R.layout.view_content_menu, this);
-        ButterKnife.bind(this);
+        mHookLayout = findViewById(R.id.layout_hook);
         mAnimation = new MenuAnimation(this, COEF_MENU_CONTENT_SCALE, COEF_MENU_CONTENT_TRANSLATION);
         mAnimation.setOnAnimationTimeChangedListener(this);
         mMinRawX = getResources().getDimension(R.dimen.menu_min_raw_x);
@@ -208,7 +200,7 @@ public class ContentMenuLayout extends FrameLayout implements GestureDetector.On
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         try {
-            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH){
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH) {
                 return false;
             }
             // right to left swipe

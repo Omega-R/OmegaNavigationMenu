@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.omega_r.omeganavigationmenulib.views.MaxHeightLinearLayout
+    <com.omega_r.libs.navigationmenu.MaxHeightLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipChildren="false"
@@ -38,6 +38,6 @@
             android:layout_height="wrap_content"
             android:text="@string/menu_contacts"/>
 
-    </com.omega_r.omeganavigationmenulib.views.MaxHeightLinearLayout>
+    </com.omega_r.libs.navigationmenu.MaxHeightLinearLayout>
 
 </android.support.percent.PercentFrameLayout>

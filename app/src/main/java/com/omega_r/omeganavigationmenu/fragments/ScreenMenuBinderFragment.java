@@ -1,6 +1,5 @@
 package com.omega_r.omeganavigationmenu.fragments;
 
-
 import android.os.Bundle;
 import android.support.annotation.FloatRange;
 import android.support.annotation.Nullable;
@@ -11,7 +10,7 @@ import android.view.View;
 
 import com.omega_r.omeganavigationmenu.MainActivity;
 
-public abstract class ScreenMenuBinderFragment extends BaseBinderFragment {
+public abstract class ScreenMenuBinderFragment extends BaseFragment {
 
     private DrawerArrowDrawable mDrawerArrowDrawable;
 
@@ -21,7 +20,7 @@ public abstract class ScreenMenuBinderFragment extends BaseBinderFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
+        if (actionBar != null && getContext() != null) {
             actionBar.setTitle(getTitle());
             mDrawerArrowDrawable = new DrawerArrowDrawable(getContext());
             actionBar.setHomeAsUpIndicator(mDrawerArrowDrawable);
@@ -29,9 +28,9 @@ public abstract class ScreenMenuBinderFragment extends BaseBinderFragment {
     }
 
     public void setMenuProgress(@FloatRange(from = 0, to = 1) float progress) {
-        if(progress == 1.0F) {
+        if (progress == 1.0F) {
             mDrawerArrowDrawable.setVerticalMirror(true);
-        } else if(progress == 0.0F) {
+        } else if (progress == 0.0F) {
             mDrawerArrowDrawable.setVerticalMirror(false);
         }
 
