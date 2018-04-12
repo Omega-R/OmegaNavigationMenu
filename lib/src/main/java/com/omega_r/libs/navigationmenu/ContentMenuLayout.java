@@ -1,4 +1,4 @@
-package com.omega_r.navigationmenu.views;
+package com.omega_r.libs.navigationmenu;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -9,8 +9,9 @@ import android.view.MotionEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 
+import com.omega_r.libs.navigationmenu.tools.MenuAnimation;
 import com.omega_r.navigationmenu.R;
-import com.omega_r.navigationmenu.tools.MenuAnimation;
+
 
 public class ContentMenuLayout extends FrameLayout implements GestureDetector.OnGestureListener,
         MenuAnimation.OnAnimationTimeChangedListener {

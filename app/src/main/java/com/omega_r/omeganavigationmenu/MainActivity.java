@@ -9,7 +9,7 @@ import com.omega_r.omeganavigationmenu.fragments.ContactsFragment;
 import com.omega_r.omeganavigationmenu.fragments.MainFragment;
 import com.omega_r.omeganavigationmenu.fragments.NewsFragment;
 import com.omega_r.omeganavigationmenu.fragments.ScreenMenuBinderFragment;
-import com.omega_r.navigationmenu.views.ContentMenuLayout;
+import com.omega_r.libs.navigationmenu.ContentMenuLayout;
 
 public class MainActivity extends AppCompatActivity implements
         ContentMenuLayout.OnProgressMenuChangedListener, View.OnClickListener {

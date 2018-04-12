@@ -1,4 +1,4 @@
-package com.omega_r.navigationmenu.views;
+package com.omega_r.libs.navigationmenu;
 
 import android.content.Context;
 import android.content.res.TypedArray;
