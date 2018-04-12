@@ -22,14 +22,14 @@ allprojects {
 **Step 2.** Add the dependency
 ```
 dependencies {
-    compile 'com.github.Omega-R:OmegaNavigationMenu:v1.0'
+    implemenation 'com.github.Omega-R:OmegaNavigationMenu:1.0.1'
 }
 ```
 
 # Usage
 Example of usage in xml layout
 ```
-<com.omega_r.omeganavigationmenulib.views.ContentMenuLayout
+<com.omega_r.libs.navigationmenu.ContentMenuLayout
         android:id="@+id/layout_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
