@@ -22,7 +22,7 @@ allprojects {
 **Step 2.** Add the dependency
 ```
 dependencies {
-    implemenation 'com.github.Omega-R:OmegaNavigationMenu:1.0.1'
+    implementation 'com.github.Omega-R:OmegaNavigationMenu:1.0.1'
 }
 ```
 
