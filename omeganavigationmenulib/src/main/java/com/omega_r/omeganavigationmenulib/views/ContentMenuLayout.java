@@ -134,6 +134,10 @@ public class ContentMenuLayout extends FrameLayout implements GestureDetector.On
                     mMotion = true;
                     mStartX = ev.getRawX();
                     mAnimation.hide();
+                    if (mAnimation.hasStarted() && !mAnimation.hasEnded()) {
+                        clearAnimation();
+                        mStartX = mHookLayout.getWidth() * COEF_MENU_CONTENT_TRANSLATION;
+                    }
                     break;
                 case MotionEvent.ACTION_MOVE:
                     if (mMotion) {
